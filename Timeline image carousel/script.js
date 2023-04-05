@@ -26,5 +26,5 @@ function increaseProgress(value) {
         progressBar.style.stroke = "rgb(7, 19, 32)";
         img.src = './images/' + images[value];
         img.style.opacity = '1'
-    }, 200)
+    }, 100)
 }
