@@ -1,0 +1,158 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #0091EA;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#sudokuContainer {
+    background-color: #0091EA;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+button#solveButton {
+    font-weight: bold;
+    border-style: none;
+    /* border-width: 2px; */
+    border-radius: 5px;
+    height: 45px;
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #0091EA;
+    color: white;
+    transition-property:transform box-shadow;
+    transition-duration:100ms;
+    box-shadow:  5px 5px 9px #0087da,
+             -5px -5px 9px #009bfa;
+}
+button#solveButton:hover {
+    cursor: pointer;
+}
+button#solveButton:active {
+    transform: translateY(2px);
+    box-shadow: none;
+    /* box-shadow: inset 5px 5px 9px #0087da,
+            inset -5px -5px 9px #009bfa; */
+}
+.inputValue {
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 0px;
+    margin: 0px;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight:bold;
+    text-align: center;
+    color: #0091EA;
+    transition-property:transform, box-shadow;
+    transition-duration:100ms;
+    background-color: white;
+}
+button.inputValue:hover {
+    cursor: pointer;
+    transform: scale(1.2); 
+    box-shadow: 2px 2px 8px 4px #44caff94,-2px -2px 8px 4px #36c7f3be; 
+}
+button.inputValue:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 8px 4px #44caff94,-2px -2px 8px 4px #36c7f3be;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+
+}
+
+#errorDialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    position: absolute;
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    color: #0091EA;
+    box-shadow: 1px 1px 5px 5px rgba(29, 84, 156, 0.247),-1px -1px 5px 5px rgba(170, 163, 163, 0.342);
+}
+.errorDialogButton {
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    border-radius: 5px;
+    height: 45px;
+    width: 100px;
+    background-color: #66C2FF;
+    color: white;
+    transition-property:transform box-shadow background-color;
+    transition-duration:100ms;
+}
+button.errorDialogButton:hover {
+    cursor: pointer;
+}
+button.errorDialogButton:active {
+    background-color: #3a9bdb;
+}
+div#row1 button:nth-child(n + 4), div#row2 button:nth-child(n + 4), div#row3 button:nth-child(n + 4)
+{
+    background-color: #90dcff;
+}
+div#row1 button:nth-child(n + 7), div#row2 button:nth-child(n + 7), div#row3 button:nth-child(n + 7)
+{
+    background-color: rgb(255, 255, 255);
+}
+
+div#row4 button:nth-child(n), div#row5 button:nth-child(n), div#row6 button:nth-child(n)
+{
+    background-color: #90dcff;
+}
+div#row4 button:nth-child(n + 4), div#row5 button:nth-child(n + 4), div#row6 button:nth-child(n + 4)
+{
+    background-color: rgb(255, 255, 255);
+}
+div#row4 button:nth-child(n + 7), div#row5 button:nth-child(n + 7), div#row6 button:nth-child(n + 7)
+{
+    background-color: #90dcff;
+}
+
+div#row7 button:nth-child(n + 4), div#row8 button:nth-child(n + 4), div#row9 button:nth-child(n + 4)
+{
+    background-color: #90dcff;
+}
+div#row7 button:nth-child(n + 7), div#row8 button:nth-child(n + 7), div#row9 button:nth-child(n + 7)
+{
+    background-color: rgb(255, 255, 255);
+}
+
+div#row1 button:nth-child(1)
+{   
+    border-top-left-radius: 4px;
+}
+div#row1 button:nth-child(9)
+{   
+    border-top-right-radius: 4px;
+}
+div#row9 button:nth-child(1)
+{   
+    border-bottom-left-radius: 4px;
+}
+div#row9 button:nth-child(9)
+{   
+    border-bottom-right-radius: 4px;
+}
