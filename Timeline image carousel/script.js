@@ -1,30 +1,31 @@
-var timer = setInterval(animateBar, 2000);
-var time = 0;
-var value = 0;
-
+var imageSwitcher = setInterval(switchImage, 10100);
+var index = 0;
 var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg']
 var numberOfImages = images.length;
 
-function animateBar() {
-    if (time >= numberOfImages) {
-        clearInterval(timer);
-        return
-    }
-    increaseProgress(value++);
-    time++;
-}
+switchImage();
 
-function increaseProgress(value) {
-    let img = document.querySelector('img');
+function switchImage() {
+    let imgName = images[index];
+    console.log("switch image called")
+
+    let progressContainer = document.getElementById('progressBarContainer');
+    let progressLine = document.getElementById('progressLine');
+    let img = document.getElementById('carouselImages');
+    
+    progressLine.remove()
+	progressLine.style.width = '1.5%'
+	progressContainer.append(progressLine)
     img.style.opacity = '0';
 
-    let progressBar = document.getElementById('progressBar');
-    progressBar.style.strokeDasharray = progressBar.getTotalLength();
-    progressBar.style.strokeDashoffset = progressBar.getTotalLength() * (1 - (value + 1) / numberOfImages);
-    
     setTimeout(() => {
-        progressBar.style.stroke = "rgb(7, 19, 32)";
-        img.src = './images/' + images[value];
-        img.style.opacity = '1'
-    }, 100)
+        progressLine.style.width = '100%'
+    },50)
+
+    setTimeout(()=>{
+        img.src = './images/' + imgName;
+        img.style.opacity = '1';
+    },500)
+
+    index = (index + 1) % numberOfImages;
 }
