@@ -7,7 +7,6 @@ switchImage();
 
 function switchImage() {
     let imgName = images[index];
-    // console.log("switch image called");
 
     let progressContainer = document.getElementById('progressBarContainer');
     let progressLine = document.getElementById('progressLine');
