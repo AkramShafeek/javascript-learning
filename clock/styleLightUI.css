@@ -1,0 +1,19 @@
+html,body {
+    background: #bed3ee;
+}
+
+div.clockContainer {
+    background: #bed3ee;
+    box-shadow:  6px 6px 12px #abbed6,
+                 -6px -6px 12px #d1e8ff;
+}
+
+div#clock {
+    background: #bed3ee;
+    box-shadow: inset 6px 6px 12px #abbed6,
+                inset -6px -6px 12px #d1e8ff;
+}
+
+div#handsContainer {
+    background-color: #bed3ee;
+}

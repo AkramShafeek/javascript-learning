@@ -20,13 +20,13 @@ function initializeClock(){
 
 initializeClock();
 
-setInterval(()=>{
+function updateClock(){
     seconds++;
-
+    
     secondsHand.style.transform = `translateY(-50%) rotate(${seconds*6}deg)`;
     minutesHand.style.transform = `translateY(-50%) rotate(${minutes*6 + seconds*(1/10)}deg)`;
     hoursHand.style.transform = `translateY(-50%) rotate(${hours*30 + + 0.5*minutes + seconds*(1/120)}deg)`;
-
+    
     if(seconds == 60){
         seconds = 0;
         setTimeout(()=>{
@@ -53,5 +53,27 @@ setInterval(()=>{
         },100)
         hours = 0;
     }
-    
-},1000)
+}
+
+
+function myfunction(){
+    updateClock()
+}
+
+setInterval(updateClock,1000)
+
+var darkmode = true;
+var lightui = document.getElementById('lightui');
+lightui.remove();
+function toggleui(){
+    if(darkmode){
+        // append light mode css file
+        document.head.append(lightui);
+    }
+    else{
+        // remove light move css file
+        lightui.remove()
+    }
+
+    darkmode = !darkmode
+}
