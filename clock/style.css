@@ -1,0 +1,108 @@
+html,
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1e29;
+}
+
+div.clockContainer {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #1a1e29;
+    box-shadow: 5px 5px 10px #151821,
+        -5px -5px 10px #1f2431;
+}
+
+div#clock {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    border-radius: 50%;
+    background: #1a1e29;
+    box-shadow: inset 5px 5px 8px #151821,
+        inset -5px -5px 8px #1f2431;
+}
+
+
+div#handsContainer {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: #1a1e29;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#handsContainer>* {
+    width: 2px;
+    transform-origin: 50% 100%;
+    border-radius: 20px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+div#centerPivot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(223, 223, 223);
+    transform: translateY(0%);
+    z-index: 1;
+}
+
+div#secondsHand {
+    height: calc(50% - 6px);
+    background-color: rgb(255, 142, 127);
+}
+
+div#minutesHand {
+    height: calc(50% - 25px);
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-50%) rotate(60deg);
+}
+
+div#hoursHand {
+    height: calc(50% - 50px);
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-50%) rotate(30deg);
+}
+
+
+div.number {
+    position: absolute;
+    width: 3px;
+    height: 93%;
+    background-color: rgb(58, 151, 206);
+}
+
+div.number:nth-child(2) {
+    transform: rotate(30deg);
+}
+
+div.number:nth-child(3) {
+    transform: rotate(60deg);
+}
+
+div.number:nth-child(4) {
+    transform: rotate(90deg);
+}
+
+div.number:nth-child(5) {
+    transform: rotate(120deg);
+}
+
+div.number:nth-child(6) {
+    transform: rotate(150deg);
+}
