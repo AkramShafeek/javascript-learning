@@ -33,7 +33,6 @@ div#clock {
         inset -5px -5px 8px #1f2431;
 }
 
-
 div#handsContainer {
     width: 230px;
     height: 230px;
@@ -51,6 +50,7 @@ div#handsContainer>* {
     border-radius: 20px;
     position: absolute;
     transform: translateY(-50%);
+    transition: all 100ms;
 }
 
 div#centerPivot {
@@ -84,7 +84,7 @@ div.number {
     position: absolute;
     width: 3px;
     height: 93%;
-    background-color: rgb(58, 151, 206);
+    background-color: rgba(39, 146, 207, 0.815);
 }
 
 div.number:nth-child(2) {
