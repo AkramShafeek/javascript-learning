@@ -8,7 +8,6 @@ body {
 
 .container {
     margin: auto;
-    width: 800px;
     height: 400px;
     display: flex;
     /* flex-direction: column; */
@@ -22,7 +21,7 @@ body {
 
 .carouselContainer {
     height: 200px;
-    width: 624px;
+    width: 630px;
     background-color: rgb(98, 182, 238);
     border-radius: 6px;
     display: flex;
@@ -31,14 +30,10 @@ body {
 }
 
 .slider {
-    height: 90%;
     background-color: rgb(54, 103, 177);
     display: flex;
     align-items: center;
-    padding: 6px;
-    gap: 6px;
-    position: relative;
-    /* left: -100px; */
+    gap: 10px;
 }
 
 .imageContainer {
