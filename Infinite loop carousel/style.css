@@ -1,0 +1,78 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 50px;
+    background-color: rgb(118, 126, 238);
+    border-radius: 6px;
+    padding: 6px 60px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.carouselContainer {
+    height: 200px;
+    width: 624px;
+    background-color: rgb(98, 182, 238);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.slider {
+    height: 90%;
+    background-color: rgb(54, 103, 177);
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    gap: 6px;
+    position: relative;
+    /* left: -100px; */
+}
+
+.imageContainer {
+    width: 200px;
+    aspect-ratio: 4 / 3;
+    background-color: rgb(158, 136, 235);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navButtonsContainer {
+    display: flex;
+    gap: 30px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #767eee;
+    box-shadow: 5px 5px 10px #6d74db,
+        -5px -5px 10px #7f88ff;
+    ;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    transition: 100ms;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
